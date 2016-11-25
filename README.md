@@ -23,6 +23,6 @@ sudo NOBLE_REPORT_ALL_HCI_EVENTS=1 node nrf-temp.js
 
 gives and output similar to this:
 
-Name: 6AF4CDD2 temperature: 19°C
-Name: 8A78B2EC temperature: 22.74°C
-Name: 6AF4CDD2 temperature: 19°C
+Name: 6AF4CDD2 temperature: 19°C  
+Name: 8A78B2EC temperature: 22.74°C  
+Name: 6AF4CDD2 temperature: 19°C  
