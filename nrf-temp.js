@@ -1,7 +1,7 @@
-var noble = require('noble');
+const noble = require('noble');
 
 const BLE_UUID_HEALTH_THERMOMETER_SERVICE="1809";
-var serviceUUIDs = [BLE_UUID_HEALTH_THERMOMETER_SERVICE];
+const serviceUUIDs = [BLE_UUID_HEALTH_THERMOMETER_SERVICE];
 
 noble.on('stateChange', function(state)
 {
@@ -17,7 +17,7 @@ noble.on('stateChange', function(state)
 
 noble.on('discover', function(peripheral)
 {
-    var serviceData = peripheral.advertisement.serviceData;
+    const serviceData = peripheral.advertisement.serviceData;
     if (serviceData && serviceData.length)
     {
         for (var i in serviceData)
