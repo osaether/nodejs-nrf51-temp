@@ -20,7 +20,7 @@ noble.on('discover', function(peripheral)
     const serviceData = peripheral.advertisement.serviceData;
     if (serviceData && serviceData.length)
     {
-        for (var i in serviceData)
+        for (let i in serviceData)
         {
             if (serviceData[i].uuid == BLE_UUID_HEALTH_THERMOMETER_SERVICE)
             {
@@ -28,7 +28,7 @@ noble.on('discover', function(peripheral)
                 let exp = Number(serviceData[i].data[3]);
                 if (exp > 127)
                    exp = exp - 256;
-                var ftemp = temperature * Math.pow(10.0, exp);
+                let ftemp = temperature * Math.pow(10.0, exp);
                 console.log(`Name: ${peripheral.advertisement.localName} temperature: ${ftemp.toString()}\xB0C`)
             }
         }
